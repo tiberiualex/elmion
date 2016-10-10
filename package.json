@@ -4,9 +4,9 @@
   "description": "\"Tiny Elm starter\"",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "elm": "elm-make Main.elm --output=build/main.js --warn",
-    "watch:elm": "onchange \"Main.elm\" -- npm run elm"
+    "elm": "elm-make src/app/Main.elm --output=build/js/main.js --warn",
+    "scss": "node-sass --output-style compressed -o build/css src/scss/main.scss",
+    "watch:elm": "onchange \"src/app/**/*.elm\" -- npm run elm"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,9 @@
   },
   "homepage": "https://github.com/tiberiualex/elmion#readme",
   "devDependencies": {
+    "browser-sync": "^2.17.2",
     "elm": "^0.17.1",
+    "node-sass": "^3.10.1",
     "onchange": "^3.0.2"
   }
 }
