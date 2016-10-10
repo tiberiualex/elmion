@@ -1,0 +1,28 @@
+{
+  "name": "elmion",
+  "version": "1.0.0",
+  "description": "\"Tiny Elm starter\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "elm": "elm-make Main.elm --output=build/main.js --warn",
+    "watch:elm": "onchange \"Main.elm\" -- npm run elm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiberiualex/elmion.git"
+  },
+  "keywords": [
+    "elm"
+  ],
+  "author": "\"Tiberiu Alexandru Butnaru\"",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tiberiualex/elmion/issues"
+  },
+  "homepage": "https://github.com/tiberiualex/elmion#readme",
+  "devDependencies": {
+    "elm": "^0.17.1",
+    "onchange": "^3.0.2"
+  }
+}
