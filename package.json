@@ -9,7 +9,7 @@
     "build": "npm run elm && npm run scss",
     "watch:elm": "onchange \"src/app/**/*.elm\" -- npm run elm",
     "watch:scss": "onchange \"src/scss/**/*.scss\" -- npm run scss",
-    "serve": "browser-sync start --server --files 'build/css/*.css, build/js/*.js'",
+    "serve": "browser-sync start --server --files \"build/css/*.css, build/js/*.js\"",
     "watch": "parallelshell \"npm run build\" \"npm run serve\" \"npm run watch:elm\" \"npm run watch:scss\""
   },
   "repository": {
