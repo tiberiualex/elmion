@@ -6,10 +6,10 @@
   "scripts": {
     "elm": "elm-make src/app/Main.elm --output=build/js/main.js --warn",
     "scss": "node-sass --output-style compressed -o build/css src/scss/main.scss",
-    "build": "npm run elm && npm run scss",
+    "build": "npm run elm && npm run scss && cp src/index.html build",
     "watch:elm": "onchange \"src/app/**/*.elm\" -- npm run elm",
     "watch:scss": "onchange \"src/scss/**/*.scss\" -- npm run scss",
-    "serve": "browser-sync start --server --files \"build/css/*.css, build/js/*.js\"",
+    "serve": "browser-sync start --server --ss build",
     "watch": "parallelshell \"npm run build\" \"npm run serve\" \"npm run watch:elm\" \"npm run watch:scss\""
   },
   "repository": {
